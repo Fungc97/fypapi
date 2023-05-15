@@ -167,7 +167,7 @@ router.route('/bookcopies/:barcode').delete((request,response)=>{
         })
 })
 
-var port = process.env.PORT||8090;
+var port = process.env.PORT||3001;
 app.listen(port);
 console.log('FYP Api is running at'+port);
 
