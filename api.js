@@ -22,6 +22,10 @@ router.use((request,response,next)=>{
         next();
 })
 
+app.get('/', (req, res) => {
+        res.send('Express hosting on Render.com')
+})
+
 router.route('/login/:ac/:pw').get((request,response)=>{
         account=new Account(request.params.ac,request.params.pw)
         dboperation.login(account).then(result =>{
