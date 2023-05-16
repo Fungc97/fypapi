@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
+    
     "start": "nodemon api.js"
   },
   "dependencies": {
