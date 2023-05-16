@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "undefined/subscriptions/b10b241a-de2d-44d2-9988-daea9993359d/resourceGroups/myResourceGroup/providers/Microsoft.Web/sites/lmsfypapi",
+    "appService.deploySubpath": "."
+}
