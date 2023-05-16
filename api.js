@@ -23,7 +23,7 @@ router.use((request,response,next)=>{
 })
 
 app.get('/', (req, res) => {
-        res.send('Express hosting on Render.com')
+        res.send('Express hosting on azure')
 })
 
 router.route('/login/:ac/:pw').get((request,response)=>{
