@@ -208,6 +208,7 @@ async function addBookCopies(bookCopies){
         .input('isbn',sql.VarChar,bookCopies.isbn)
         .input('libid',sql.VarChar,bookCopies.libid)
         .input('barcode',sql.VarChar,bookCopies.barcode)
+        .input('ac',sql.VarChar,bookCopies.ac)
         .execute('InsertBookCopies'); //stored procedure
 
         return insertBookCop.recordsets[0][0]; 
@@ -254,12 +255,13 @@ async function updateBook(updateReqBody){
     }
 
 }
-async function delBook(barcode){
+async function delBook(barcode,ac){
     try{
         let pool=await sql.connect(config);
         let delBook = await pool.request()
 
         .input('barcodeId',sql.VarChar,barcode)
+        .input('ac',sql.VarChar,ac)
         .execute('deleteBook'); //stored procedure
 
         return delBook.recordsets[0][0]; 

@@ -159,9 +159,9 @@ router.route('/book').put((request,response)=>{
             response.json(result);
         })
 })
-router.route('/bookcopies/:barcode').delete((request,response)=>{
+router.route('/bookcopies/:barcode/:ac').delete((request,response)=>{
        
-        dboperation.delBook(request.params.barcode).then(result =>{
+        dboperation.delBook(request.params.barcode,request.params.ac).then(result =>{
        
             response.json(result);
         })
